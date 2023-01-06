@@ -44,6 +44,7 @@ func HandleConnection(ctx context.Context, conn net.Conn, reader *std_bufio.Read
 				if err != nil {
 					return err
 				}
+				return E.New("http: incorrect user name or password")
 			}
 		}
 
